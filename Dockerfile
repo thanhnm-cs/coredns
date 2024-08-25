@@ -4,9 +4,9 @@ FROM --platform=$BUILDPLATFORM ${DEBIAN_IMAGE} AS build
 SHELL [ "/bin/sh", "-ec" ]
 
 RUN export DEBCONF_NONINTERACTIVE_SEEN=true \
-           DEBIAN_FRONTEND=noninteractive \
-           DEBIAN_PRIORITY=critical \
-           TERM=linux ; \
+    DEBIAN_FRONTEND=noninteractive \
+    DEBIAN_PRIORITY=critical \
+    TERM=linux ; \
     apt-get -qq update ; \
     apt-get -yyqq upgrade ; \
     apt-get -yyqq install ca-certificates libcap2-bin; \
