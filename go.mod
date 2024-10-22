@@ -10,6 +10,7 @@ require (
 	github.com/apparentlymart/go-cidr v1.1.0
 	github.com/aws/aws-sdk-go v1.51.25
 	github.com/coredns/caddy v1.1.1
+	github.com/coredns/rrl v0.0.0-20231211184950-d11f7279e84a
 	github.com/dnstap/golang-dnstap v0.4.0
 	github.com/farsightsec/golang-framestream v0.3.0
 	github.com/go-logr/logr v1.4.1
