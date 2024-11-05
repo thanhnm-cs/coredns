@@ -7,8 +7,7 @@ https://.:8080 {
     }
     cache 120
     loop
-    reload
     loadbalance
     ready 0.0.0.0:8080
-    prometheus localhost:8080
+    prometheus 0.0.0.0:8080
 }
