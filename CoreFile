@@ -1,0 +1,14 @@
+https://.:8480 {
+    forward . tls://1.1.1.1
+    log
+    errors
+    health {
+        lameduck 5s
+    }
+    cache 120
+    loop
+    reload
+    loadbalance
+    ready
+    prometheus 0.0.0.0:9153
+}

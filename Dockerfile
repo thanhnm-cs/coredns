@@ -17,6 +17,8 @@ RUN setcap cap_net_bind_service=+ep /coredns
 FROM --platform=$TARGETPLATFORM ${BASE}
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /coredns /coredns
+COPY CoreFile /CoreFile
+
 USER nonroot:nonroot
 EXPOSE 53 53/udp
 ENTRYPOINT ["/coredns"]
