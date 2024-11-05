@@ -1,4 +1,4 @@
-https://.:8480 {
+https://.:8080 {
     forward . tls://1.1.1.1
     log
     errors
@@ -9,6 +9,6 @@ https://.:8480 {
     loop
     reload
     loadbalance
-    ready
-    prometheus 0.0.0.0:9153
+    ready 0.0.0.0:8080
+    prometheus localhost:8080
 }

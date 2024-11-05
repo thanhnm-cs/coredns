@@ -12,7 +12,7 @@ ENV GOFLAGS="-buildvcs=false"
 RUN GOFLAGS="-buildvcs=false" make gen && GOFLAGS="-buildvcs=false" make
 RUN ls -l
 
-FROM --platform=$BUILDPLATFORM ${DEBIAN_IMAGE} AS build
+FROM ${DEBIAN_IMAGE} AS build
 SHELL [ "/bin/sh", "-ec" ]
 
 RUN export DEBCONF_NONINTERACTIVE_SEEN=true \
