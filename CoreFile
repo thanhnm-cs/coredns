@@ -1,5 +1,5 @@
-https://.:8080 {
-    forward . tls://1.1.1.1
+https://.:8443 {
+    forward . tls://1.1.1.1 tls://8.8.8.8 tls://8.8.4.4
     log
     errors
     health {
@@ -8,6 +8,6 @@ https://.:8080 {
     cache 120
     loop
     loadbalance
-    ready 0.0.0.0:8080
+    ready
     prometheus 0.0.0.0:8080
 }
