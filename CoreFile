@@ -1,12 +1,4 @@
 https://.:8553 {
-
-    // acl facebook.com {
-    //     block net 0.0.0.0/0
-    // }
-    // acl vnexpress.net {
-    //     block net 0.0.0.0/0
-    // }
-
     forward . /etc/resolv.conf
     log
     errors
