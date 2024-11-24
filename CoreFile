@@ -11,7 +11,7 @@ https://.:8553 {
     ready
     prometheus 0.0.0.0:8080
 }
-https://.com:8553 {
+https://.com.:8553 {
     acl forwhimsicottan.com {
         drop net 0.0.0.0/0
     }
