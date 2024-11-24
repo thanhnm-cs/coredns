@@ -11,3 +11,20 @@ https://.:8553 {
     ready
     prometheus 0.0.0.0:8080
 }
+https://.com:8553 {
+    acl forwhimsicottan.com {
+        drop net 192.0.2.0/24
+    }
+    forward . /etc/resolv.conf
+    log
+    errors
+    health {
+        lameduck 5s
+    }
+    cache 120
+    loop
+    loadbalance
+    ready
+    prometheus 0.0.0.0:8080
+}
+
