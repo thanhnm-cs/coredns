@@ -1,4 +1,8 @@
 https://.:8553 {
+    acl qc.x8.games {
+        drop net 0.0.0.0/0
+    }
+    
     forward . /etc/resolv.conf
     log
     errors
