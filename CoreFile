@@ -2,7 +2,12 @@ https://.:8553 {
     acl qc.x8.games {
         drop net 0.0.0.0/0
     }
-    
+    acl piliscuddies.shop {
+        drop net 0.0.0.0/0
+    }
+    acl strodecheese.top {
+        drop net 0.0.0.0/0
+    }
     forward . /etc/resolv.conf
     log
     errors
@@ -16,7 +21,13 @@ https://.:8553 {
     prometheus 0.0.0.0:8080
 }
 https://com.:8553 {
+    acl rtbbtech.com {
+        drop net 0.0.0.0/0
+    }
     acl forwhimsicottan.com {
+        drop net 0.0.0.0/0
+    }
+    acl noawheestauw.com {
         drop net 0.0.0.0/0
     }
     forward . /etc/resolv.conf
