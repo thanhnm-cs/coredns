@@ -8,7 +8,7 @@ https://.:8553 {
     acl strodecheese.top {
         drop net 0.0.0.0/0
     }
-    acl .win {
+    acl win {
         drop net 0.0.0.0/0
     }
     forward . /etc/resolv.conf
